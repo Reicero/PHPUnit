@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"Tests\\RouterTest::testRegisterAddsRoute":0.006}}
+{"version":2,"defects":[],"times":{"Tests\\RouterTest::testRegisterAddsRoute":0,"Tests\\RouterTest::testRegisterStoresRoute":0.005}}
