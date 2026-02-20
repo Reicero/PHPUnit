@@ -1,0 +1,36 @@
+{
+  "pre-commit": {
+    "enabled": true,
+    "actions": [
+      {
+        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
+        "options": {
+          "command": "php vendor/bin/php-cs-fixer fix src --rules=@PSR12 --diff"
+        }
+      },
+      {
+        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
+        "options": {
+          "command": "git add ."
+        }
+      }
+    ]
+  },
+  "pre-push": {
+    "enabled": true,
+    "actions": [
+      {
+        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
+        "options": {
+          "command": "php vendor/bin/phpstan analyse src"
+        }
+      },
+      {
+        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
+        "options": {
+          "command": "php vendor/bin/phpunit tests"
+        }
+      }
+    ]
+  }
+}
