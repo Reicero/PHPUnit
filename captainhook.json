@@ -3,16 +3,10 @@
     "enabled": true,
     "actions": [
       {
-        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
-        "options": {
-          "command": "php vendor/bin/php-cs-fixer fix src --rules=@PSR12 --diff"
-        }
+        "action": "php vendor\\bin\\php-cs-fixer fix src --rules=@PSR12 --diff"
       },
       {
-        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
-        "options": {
-          "command": "git add ."
-        }
+        "action": "git add ."
       }
     ]
   },
@@ -20,16 +14,10 @@
     "enabled": true,
     "actions": [
       {
-        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
-        "options": {
-          "command": "php vendor/bin/phpstan analyse src"
-        }
+        "action": "php vendor\\bin\\phpstan analyse src"
       },
       {
-        "action": "\\CaptainHook\\App\\Hook\\Action\\Exec",
-        "options": {
-          "command": "php vendor/bin/phpunit tests"
-        }
+        "action": "php vendor\\bin\\phpunit"
       }
     ]
   }

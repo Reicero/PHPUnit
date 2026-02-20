@@ -7,13 +7,15 @@ use App\Router\Router;
 
 class RouterTest extends TestCase
 {
-        public function testRegisterStoresRoute()
+    public function testRegisterStoresRoute()
     {
-        $closure = function() { return "Register"; };
-        
+        $closure = function () {
+            return "Register";
+        };
+
         $router = new Router();
         $router->register('/test', $closure);
-        
+
         $this->assertArrayHasKey('/test', $router->routes);
 
     }
@@ -21,7 +23,7 @@ class RouterTest extends TestCase
     {
         $router = new Router();
 
-        $action = fn () => "ok";
+        $action = fn() => "ok";
 
         $router->register("/home", $action);
 
