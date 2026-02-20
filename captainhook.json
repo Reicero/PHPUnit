@@ -13,12 +13,8 @@
   "pre-push": {
     "enabled": true,
     "actions": [
-      {
-        "action": "php vendor\\bin\\phpstan analyse src"
-      },
-      {
-        "action": "php vendor\\bin\\phpunit"
-      }
+      { "action": "php vendor\\bin\\phpstan analyse src" },
+      { "action": "php vendor\\bin\\phpunit tests" }
     ]
   }
 }
