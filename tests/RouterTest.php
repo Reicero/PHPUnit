@@ -23,7 +23,7 @@ class RouterTest extends TestCase
     {
         $router = new Router();
 
-        $action = fn() => "ok";
+        $action = fn () => "ok";
 
         $router->register("/home", $action);
 
